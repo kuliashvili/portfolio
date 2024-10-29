@@ -1,0 +1,24 @@
+@import url("../../../styles/design-system.css");
+
+.button{
+  min-width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  background-color: var(--color-thin-purple);
+  border-radius: 50px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+}
+.button:hover{
+    background-color: var(--color-main-purple);
+}

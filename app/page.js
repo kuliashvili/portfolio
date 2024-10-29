@@ -8,6 +8,7 @@ export default function Home() {
       <p>zd all</p>
       <Button>ragac</Button>
       <Button>submit</Button>
+      <Button>submit your text please</Button>
     </div>
   );
 }
