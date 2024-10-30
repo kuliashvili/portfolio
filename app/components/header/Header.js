@@ -3,6 +3,8 @@ import "./Header.css";
 import { useState } from "react";
 import BurgerMenu from "../../assets/burger-menu.svg";
 import BurgerClose from "../../assets/burger-close.svg";
+import GithubIcon from "../../assets/github.svg";
+import LinkedinIcon from "../../assets/linkedin.svg";
 import Image from "next/image";
 
 function Header() {
@@ -16,7 +18,7 @@ function Header() {
       <div className="header-desktop">
         <div className="header-logo">Portfolio</div>
         <nav className="header-nav">
-          <ul>
+          <ul className="header-nav-list">
             <li className="nav-item">
               <a href="/">Home</a>
             </li>
@@ -28,6 +30,34 @@ function Header() {
             </li>
           </ul>
         </nav>
+        <div className="header-socials">
+          <a
+            className="header-socials-item"
+            href="https://github.com/kuliashvili"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={GithubIcon}
+              width={30}
+              height={30}
+              alt="Github Icon"
+            ></Image>
+          </a>
+          <a
+            className="header-socials-item"
+            href="https://www.linkedin.com/in/kuliashvili/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={LinkedinIcon}
+              width={30}
+              height={30}
+              alt="Linkedin Icon"
+            ></Image>
+          </a>
+        </div>
       </div>
 
       <div className="header-mobile">
