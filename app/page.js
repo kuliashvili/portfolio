@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Button from "./components/button/Button";
 import "./styles/globals.css";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer"
+import Footer from "./components/footer/Footer";
+import IntroSection from "./components/introsection/IntroSection";
 
 export default function Home() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -21,7 +22,7 @@ export default function Home() {
   return (
     <div className="Portfolio">
       <Header></Header>
-      <Button></Button>
+      <IntroSection></IntroSection>
       <Footer></Footer>
       <div
         className="blur-effect"

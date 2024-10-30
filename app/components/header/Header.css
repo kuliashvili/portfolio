@@ -57,7 +57,7 @@
 }
 .mobile-nav {
   position: fixed;
-  background-color: black;
+  background-color: var(--color-background);
   top: 0px;
   right: -100%;
   width: 50%;

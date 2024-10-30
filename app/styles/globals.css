@@ -55,10 +55,12 @@
   color: white;
   font-weight: 600;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: var(--font-size-h1);
+  font-weight: 700;
 }
 
 h2 {
@@ -75,7 +77,8 @@ p {
 
 html {
   overflow-x: hidden;
-  background-color: var(--color-black);
+  background-color: var(--color-background);
+  /* background-color: var(--color-black); */
 }
 .Portfolio {
   min-height: 100vh;
@@ -97,5 +100,4 @@ html {
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
   z-index: -1;
-  
 }
