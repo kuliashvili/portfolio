@@ -1,0 +1,12 @@
+@media (min-width: 768px){
+    .header-mobile {
+        display: none;
+    }
+    .header-desktop{
+        display: flex;
+    }
+
+    .header-desktop .header-nav {
+        display: flex;
+    }
+}
