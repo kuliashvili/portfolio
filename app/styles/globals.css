@@ -79,10 +79,14 @@ html {
 }
 .Portfolio {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .blur-effect {
-  position: absolute;
+  position: fixed;
   width: 500px;
   height: 500px;
   background-color: var(--color-thin-purple);
@@ -91,4 +95,6 @@ html {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
+  z-index: -1;
+  
 }
