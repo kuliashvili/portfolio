@@ -69,3 +69,23 @@ h3 {
 p {
   font-size: var(--font-size-p);
 }
+
+html {
+  overflow-x: hidden;
+  background-color: var(--color-black);
+}
+.Portfolio {
+  min-height: 100vh;
+}
+
+.blur-effect {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: var(--color-thin-purple);
+  filter: blur(400px);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
