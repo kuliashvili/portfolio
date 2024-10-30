@@ -89,7 +89,8 @@ html {
   position: fixed;
   width: 500px;
   height: 500px;
-  background-color: var(--color-thin-purple);
+  /* background-color: var(--color-thin-purple); */
+  background-color: #0f4ade;
   filter: blur(400px);
   border-radius: 50%;
   pointer-events: none;

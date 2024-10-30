@@ -5,6 +5,7 @@ import BurgerMenu from "../../assets/burger-menu.svg";
 import BurgerClose from "../../assets/burger-close.svg";
 import GithubIcon from "../../assets/github.svg";
 import LinkedinIcon from "../../assets/linkedin.svg";
+import Logo from "../../assets/logo.svg";
 import Image from "next/image";
 
 function Header() {
@@ -16,7 +17,11 @@ function Header() {
   return (
     <div className="header">
       <div className="header-desktop">
-        <div className="header-logo">Portfolio</div>
+        <div className="header-logo">
+          <a className="header-logo-image" href="/">
+            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+          </a>
+        </div>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="nav-item">
