@@ -23,6 +23,8 @@ export default function Home() {
     <div className="Portfolio">
       <Header></Header>
       <IntroSection></IntroSection>
+      <IntroSection></IntroSection>
+      <IntroSection></IntroSection>
       <Footer></Footer>
       <div
         className="blur-effect"

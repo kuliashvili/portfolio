@@ -77,8 +77,8 @@ p {
 
 html {
   overflow-x: hidden;
-  background-color: var(--color-background);
-  /* background-color: var(--color-black); */
+  /* background-color: var(--color-background); */
+  background-color: var(--color-black);
 }
 .Portfolio {
   min-height: 100vh;
