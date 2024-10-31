@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import IntroSection from "./components/introsection/IntroSection";
+import Skills from "./components/skills/Skills";
 
 export default function Home() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -23,6 +24,7 @@ export default function Home() {
     <div className="Portfolio">
       <Header></Header>
       <IntroSection></IntroSection>
+      <Skills></Skills>
       <IntroSection></IntroSection>
       <IntroSection></IntroSection>
       <Footer></Footer>

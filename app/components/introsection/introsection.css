@@ -2,7 +2,7 @@
   max-width: 2560px;
   margin-top: 80px;
   min-height: 500px;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,8 +10,6 @@
 }
 .section-left {
   margin-top: 50px;
-  margin-right: 16px;
-  margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -39,22 +37,26 @@
   color: #00ffff;
 }
 .profile-description {
-  margin: 16px;
   margin-top: 24px;
   margin-bottom: 0;
 }
 .profile-header {
   margin: 16px;
+  margin-left: 0;
+  margin-right: 0;
   text-align: center;
 }
 .profile-subheader {
   margin: 16px;
+  margin-left: 0;
+  margin-right: 0;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .introsection {
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
   .section-right {
     align-items: start;
@@ -70,5 +72,6 @@
   }
   .section-left {
     margin: 0;
+    /* justify-content: end; */
   }
 }
