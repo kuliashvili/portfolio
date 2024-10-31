@@ -66,7 +66,11 @@ function Header() {
       </div>
 
       <div className="header-mobile">
-        <div className="header-logo">Portfolio</div>
+      <div className="header-logo">
+          <a className="header-logo-image" href="/">
+            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+          </a>
+        </div>
         <button className="burger-menu" onClick={toggleMenu}>
           <Image
             src={BurgerMenu}
