@@ -1,0 +1,39 @@
+.about {
+  width: 90%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #00ffff;
+}
+
+/* .about-text{
+    text-align: center;
+  } */
+
+.button {
+  margin-top: 20px;
+}
+.about-text {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about {
+    align-items: start;
+  }
+  .about-text {
+    text-align: start;
+  }
+}

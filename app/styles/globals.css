@@ -74,6 +74,9 @@ h3 {
 p {
   font-size: var(--font-size-p);
 }
+a{
+  text-decoration: none;
+}
 
 html {
   overflow-x: hidden;

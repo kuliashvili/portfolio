@@ -1,12 +1,12 @@
 @import url("../../styles/design-system.css");
 
-.button{
+.button {
   min-width: 120px;
   height: 40px;
   font-size: 16px;
   font-family: var(--font-family);
-  font-weight: 400;
-  background-color: var(--color-thin-purple);
+  font-weight: 600;
+  background-color: var(--color-cyan);
   border-radius: 50px;
   color: white;
   border: none;
@@ -18,7 +18,8 @@
   justify-content: center;
   align-items: center;
   letter-spacing: 3px;
+  color: black;
 }
-.button:hover{
-    background-color: var(--color-main-purple);
+.button:hover {
+  background-color: var(--color-cyan-hover);
 }
