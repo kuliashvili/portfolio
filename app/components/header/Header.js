@@ -1,12 +1,13 @@
 "use client";
 import "./Header.css";
 import { useState } from "react";
-import BurgerMenu from "../../assets/burger-menu.svg";
-import BurgerClose from "../../assets/burger-close.svg";
-import GithubIcon from "../../assets/github.svg";
-import LinkedinIcon from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo.svg";
+import BurgerMenu from "/burger-menu.svg";
+import BurgerClose from "/burger-close.svg";
+import GithubIcon from "/github.svg";
+import LinkedinIcon from "/linkedin.svg";
+import Logo from "/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,58 +19,50 @@ function Header() {
     <div className="header">
       <div className="header-desktop">
         <div className="header-logo">
-          <a className="header-logo-image" href="/">
+          {/* <a className="header-logo-image" href="/">
             <Image src={Logo} width={30} height={30} alt="Logo"></Image>
-          </a>
+          </a> */}
+          <Link className="header-logo-image" href="/" ><Image src={Logo} width={30} height={30} alt="Logo"></Image></Link>
         </div>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="nav-item">
-              <a href="/">Home</a>
+              {/* <a href="/">Home</a> */}
+              <Link href="/" >Home</Link>
             </li>
             <li className="nav-item">
-              <a href="/about">About</a>
+              {/* <a href="/about">About</a> */}
+              <Link href="/about" >About</Link>
             </li>
             <li className="nav-item">
-              <a href="/contact">Contact</a>
+              {/* <a href="/contact">Contact</a> */}
+              <Link href="/contact" >Contact</Link>
             </li>
           </ul>
         </nav>
         <div className="header-socials">
-          <a
-            className="header-socials-item"
-            href="https://github.com/kuliashvili"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
+          <Link className="header-socials-item" href="https://github.com/kuliashvili" target="_blank" rel="noopener noreferrer">
+          <Image
               src={GithubIcon}
               width={30}
               height={30}
               alt="Github Icon"
-            ></Image>
-          </a>
-          <a
-            className="header-socials-item"
-            href="https://www.linkedin.com/in/kuliashvili/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
+            ></Image></Link>
+          <Link className="header-socials-item" href="https://www.linkedin.com/in/kuliashvili/" target="_blank" rel="noopener noreferrer">
+          <Image
               src={LinkedinIcon}
               width={30}
               height={30}
               alt="Linkedin Icon"
-            ></Image>
-          </a>
+            ></Image></Link>
         </div>
       </div>
 
       <div className="header-mobile">
       <div className="header-logo">
-          <a className="header-logo-image" href="/">
-            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
-          </a>
+
+          <Link className="header-logo-image" href="/" >
+          <Image src={Logo} width={30} height={30} alt="Logo"></Image></Link>
         </div>
         <button className="burger-menu" onClick={toggleMenu}>
           <Image
@@ -91,13 +84,16 @@ function Header() {
           </button>
           <ul className="mobile-nav-links">
             <li className="nav-item">
-              <a href="/">Home</a>{" "}
+ 
+              <Link href="/" >Home</Link>
             </li>
             <li className="nav-item">
-              <a href="/about">About</a>{" "}
+              <Link href="/about" >About</Link>
+
             </li>
             <li className="nav-item">
-              <a href="/contact">Contact</a>{" "}
+              <Link href="/contact" >Contact</Link>
+
             </li>
           </ul>
         </nav>
