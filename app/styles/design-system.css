@@ -5,8 +5,10 @@
   --color-thin-purple: #933dc9;
   --color-main-purple: #53118f;
   --color-magneta: #ff00ff;
-  --color-cyan: #00ffff;
-  --color-cyan-hover: #03b5b5;
+  --color-main: #00ffff;
+  --color-main: #84a3f2;
+  --color-secondary: #4b629c;
+  /* 84a3f2 */
   --color-background: #020c25;
 
   /* Typography */

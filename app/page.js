@@ -25,7 +25,7 @@ export default function Home() {
     <div className="Portfolio">
       <Header></Header>
       <IntroSection></IntroSection>
-      <Skills></Skills>
+      {/* <Skills></Skills>  */}
       <About></About>
       <Footer></Footer>
       <div

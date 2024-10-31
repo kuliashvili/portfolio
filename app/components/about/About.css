@@ -14,7 +14,7 @@
 
 .link {
   text-decoration: none;
-  color: #00ffff;
+  color: var(--color-main);
 }
 
 /* .about-text{
