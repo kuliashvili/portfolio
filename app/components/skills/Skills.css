@@ -1,7 +1,7 @@
 .skills {
   width: 90%;
   margin: 16px;
-    margin-left: 0;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 50px;
   display: flex;
@@ -16,12 +16,9 @@
 @media (min-width: 768px) {
   .skills {
     width: 90%;
-
-
   }
   .skills-image {
     width: 8%;
     max-width: 5%;
-
   }
 }
