@@ -27,8 +27,6 @@ export default function Home() {
       <IntroSection></IntroSection>
       <Skills></Skills>
       <About></About>
-      <IntroSection></IntroSection>
-      <IntroSection></IntroSection>
       <Footer></Footer>
       <div
         className="blur-effect"
