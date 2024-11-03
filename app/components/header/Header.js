@@ -22,47 +22,61 @@ function Header() {
           {/* <a className="header-logo-image" href="/">
             <Image src={Logo} width={30} height={30} alt="Logo"></Image>
           </a> */}
-          <Link className="header-logo-image" href="/" ><Image src={Logo} width={30} height={30} alt="Logo"></Image></Link>
+          <Link className="header-logo-image" href="/">
+            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+          </Link>
         </div>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="nav-item">
               {/* <a href="/">Home</a> */}
-              <Link href="/" >Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="nav-item">
               {/* <a href="/about">About</a> */}
-              <Link href="/about" >About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className="nav-item">
               {/* <a href="/contact">Contact</a> */}
-              <Link href="/contact" >Contact</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
         <div className="header-socials">
-          <Link className="header-socials-item" href="https://github.com/kuliashvili" target="_blank" rel="noopener noreferrer">
-          <Image
+          <Link
+            className="header-socials-item"
+            href="https://github.com/kuliashvili"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
               src={GithubIcon}
               width={30}
               height={30}
               alt="Github Icon"
-            ></Image></Link>
-          <Link className="header-socials-item" href="https://www.linkedin.com/in/kuliashvili/" target="_blank" rel="noopener noreferrer">
-          <Image
+            ></Image>
+          </Link>
+          <Link
+            className="header-socials-item"
+            href="https://www.linkedin.com/in/kuliashvili/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
               src={LinkedinIcon}
               width={30}
               height={30}
               alt="Linkedin Icon"
-            ></Image></Link>
+            ></Image>
+          </Link>
         </div>
       </div>
 
       <div className="header-mobile">
-      <div className="header-logo">
-
-          <Link className="header-logo-image" href="/" >
-          <Image src={Logo} width={30} height={30} alt="Logo"></Image></Link>
+        <div className="header-logo">
+          <Link className="header-logo-image" href="/">
+            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+          </Link>
         </div>
         <button className="burger-menu" onClick={toggleMenu}>
           <Image
@@ -84,16 +98,13 @@ function Header() {
           </button>
           <ul className="mobile-nav-links">
             <li className="nav-item">
- 
-              <Link href="/" >Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" >About</Link>
-
+              <Link href="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact" >Contact</Link>
-
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
