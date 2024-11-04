@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 .mobile-nav-links {
-  padding-top: var(--spacing-extra-large);
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,6 +67,7 @@
   height: 100vh;
   transition: right 0.3s ease;
   border-left: 1px solid white;
+
 }
 .mobile-nav.open {
   right: 0;

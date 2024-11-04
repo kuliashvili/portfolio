@@ -60,6 +60,56 @@ function Container() {
           </div>
         </div>
       </Link>
+
+      <h2 className="experiences-header" style={{ marginTop: "50px" }}>
+        Projects
+      </h2>
+      <Link
+        href="https://gamoitsani.info/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-link"
+      >
+        <div className="experience">
+          <h3 className="container-title">gamoitsani.info</h3>
+          <p className="container-description">
+            Gamoitsani.info is the official site for the Gamoitsani iOS app,
+            providing all the app's details and how to use it. I fully designed
+            and built the site from scratch, with a clean color scheme for an
+            easy and enjoyable browsing experience
+          </p>
+          <div className="technology">
+            <div className="technology-item">Html</div>
+            <div className="technology-item">Css</div>
+            <div className="technology-item">JavaScript</div>
+            <div className="technology-item">Git</div>
+            <div className="technology-item">Figma</div>
+          </div>
+        </div>
+      </Link>
+      <Link
+        href="https://plintus.ge/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-link"
+      >
+        <div className="experience">
+          <h3 className="container-title">plintus.ge</h3>
+          <p className="container-description">
+            Plintus.ge is an informative website about baseboards, designed and
+            developed to meet the client's needs. I handled the entire design
+            process, from choosing the color scheme to building the site,
+            ensuring a cohesive and attractive look
+          </p>
+          <div className="technology">
+            <div className="technology-item">Html</div>
+            <div className="technology-item">Css</div>
+            <div className="technology-item">JavaScript</div>
+            <div className="technology-item">Git</div>
+            <div className="technology-item">WordPress</div>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }
