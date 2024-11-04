@@ -15,6 +15,7 @@
   align-items: start;
 }
 .profile-picture {
+  max-width: 300px;
   width: 60%;
   height: auto;
   /* border: 2px solid #84a3f2; */
@@ -72,6 +73,7 @@
     width: 90%;
   }
   .section-left {
+    width: 50%;
     margin: 0;
     /* justify-content: end; */
   }
