@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import IntroSection from "./components/introsection/IntroSection";
 import Skills from "./components/skills/Skills";
 import About from "./components/about/About";
+import Container from "./components/experience/Experience";
 
 export default function Home() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -27,6 +28,7 @@ export default function Home() {
       <IntroSection></IntroSection>
       {/* <Skills></Skills>  */}
       <About></About>
+      <Container></Container>
       <Footer></Footer>
       <div
         className="blur-effect"

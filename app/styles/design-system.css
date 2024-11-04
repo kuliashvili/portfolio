@@ -20,10 +20,13 @@
   --font-size-h2: 28px;
   --font-size-h3: 22px;
   --font-size-p: 16px;
+  --font-size-small: 12px;
 
   /* Spacing */
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 24px;
   --spacing-extra-large: 50px;
+
+  --max-width: 2560px
 }

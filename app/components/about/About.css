@@ -1,7 +1,8 @@
 .about {
   width: 90%;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  max-width: var(--max-width);
+  margin-bottom: 70px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
