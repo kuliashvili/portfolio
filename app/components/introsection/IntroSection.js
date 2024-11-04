@@ -11,6 +11,7 @@ function IntroSection() {
           width={500}
           height={500}
           alt="Profile Picture"
+          priority={true}
         ></Image>
       </div>
       <div className="section-right">
