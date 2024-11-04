@@ -16,7 +16,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="header">
+    <header className="header">
       <div className="header-desktop">
         <div className="header-logo">
           {/* <a className="header-logo-image" href="/">
@@ -109,7 +109,7 @@ function Header() {
           </ul>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
 

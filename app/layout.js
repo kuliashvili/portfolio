@@ -1,14 +1,34 @@
+"use client";
 import "./styles/globals.css";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import { useState, useEffect } from "react";
 
-export const metadata = {
-  title: "Kulo Portfolio",
-  description: "Giorgi Kuliashvili Portfolio Website",
-};
 
 export default function RootLayout({ children }) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en"  >
+      <body className="Portfolio" >
+        <Header />
+        {children}
+        <Footer />
+        <div
+          className="blur-effect"
+          style={{ left: `${position.x}px`, top: `${position.y}px` }}
+        ></div>
+      </body>
     </html>
   );
 }

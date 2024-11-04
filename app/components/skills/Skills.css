@@ -1,9 +1,10 @@
 .skills {
   width: 90%;
+  max-width: var(--max-width);
   margin: 16px;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +20,6 @@
   }
   .skills-image {
     width: 8%;
-    max-width: 5%;
+    max-width: 45px;
   }
 }
