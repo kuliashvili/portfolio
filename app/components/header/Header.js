@@ -1,11 +1,11 @@
 "use client";
 import "./Header.css";
 import { useState } from "react";
-import BurgerMenu from "/burger-menu.svg";
-import BurgerClose from "/burger-close.svg";
-import GithubIcon from "/github.svg";
-import LinkedinIcon from "/linkedin.svg";
-import Logo from "/logo.svg";
+import BurgerMenu from "../../../public/assets/burger-menu.svg";
+import BurgerClose from "../../../public/assets/burger-close.svg";
+import GithubIcon from "../../../public/assets/github.svg";
+import LinkedinIcon from "../../../public/assets/linkedin.svg";
+import Logo from "../../../public/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 

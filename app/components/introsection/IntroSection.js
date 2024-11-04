@@ -1,6 +1,6 @@
 import "./introsection.css";
 import Image from "next/image";
-import Profile from "../../assets/profile.webp";
+import Profile from "../../../public/assets/profile.webp";
 function IntroSection() {
   return (
     <div className="introsection">
