@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import IntroSection from "./components/introsection/IntroSection";
 import Skills from "./components/skills/Skills";
 import About from "./components/about/About";
+import Experience from "./components/experience/Experience"
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       <IntroSection></IntroSection>
       {/* <Skills></Skills>  */}
       <About></About>
+      <Experience></Experience>
     </div>
   );
 }
