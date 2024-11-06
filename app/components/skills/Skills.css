@@ -1,10 +1,10 @@
 .skills {
   width: 90%;
   max-width: var(--max-width);
-  margin: 16px;
+  margin: var(--spacing-medium);
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 50px;
+  margin-bottom: var(--spacing-extra-large);
   display: flex;
   justify-content: space-between;
   align-items: center;
