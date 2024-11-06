@@ -13,10 +13,10 @@
   align-items: center;
 }
 .footer-socials {
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-medium);
 }
 .footer-email {
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-large);
 }
 .footer-email a {
   text-decoration: none;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 .footer-socials-item {
-  margin-right: 16px;
+  margin-right: var(--spacing-medium);
 }
 
 @media (min-width: 768px) {
@@ -46,10 +46,10 @@
   }
   .footer-socials {
     margin-bottom: 0;
-    margin-left: 16px;
+    margin-left: var(--spacing-medium);
   }
   .footer-email {
     margin-bottom: 0;
-    margin-left: 50px;
+    margin-left: var(--spacing-extra-large);
   }
 }
