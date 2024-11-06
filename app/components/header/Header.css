@@ -5,8 +5,8 @@
   right: 0;
   z-index: 10;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: var(--color-background-thin);
+  border-bottom: 1px solid var(--color-white);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
@@ -45,8 +45,6 @@
   list-style-type: none;
 }
 
-.header-logo {
-}
 
 .header-desktop {
   display: none;
@@ -66,7 +64,7 @@
   width: 50%;
   height: 100vh;
   transition: right 0.3s ease;
-  border-left: 1px solid white;
+  border-left: 1px solid var(--color-white);
 
 }
 .mobile-nav.open {
@@ -94,9 +92,9 @@
   }
   .nav-item {
     margin-bottom: 0;
-    margin-right: 16px;
+    margin-right: var(--spacing-medium);
   }
   .header-socials-item {
-    margin-right: 16px;
+    margin-right: var(--spacing-medium);
   }
 }
