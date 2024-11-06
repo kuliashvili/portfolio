@@ -29,15 +29,18 @@ function Header() {
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="nav-item">
-              {/* <a href="/">Home</a> */}
               <Link href="/">Home</Link>
             </li>
             <li className="nav-item">
-              {/* <a href="/about">About</a> */}
               <Link href="/about">About</Link>
             </li>
             <li className="nav-item">
-              {/* <a href="/contact">Contact</a> */}
+              <Link href="/portfolio">Portfolio</Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li className="nav-item">
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
@@ -102,6 +105,12 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link href="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/portfolio">Portfolio</Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/blog">Blog</Link>
             </li>
             <li className="nav-item">
               <Link href="/contact">Contact</Link>

@@ -1,58 +1,54 @@
-.experiences{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: var(--max-width);
-    margin-bottom: 70px;
-
+.experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: var(--max-width);
+  margin-bottom: var(--spacing);
 }
 
-.experience{
-    padding: 20px;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    margin-bottom: 20px;
-
+.experience {
+  padding: var(--spacing-medium);
+  border-radius: var(--radius-small);
+  background-color: var(--color-background-thin);
+  border: 1px solid var(--color-white);
+  backdrop-filter: blur(10px);
+  margin-bottom: var(--spacing-medium);
 }
-.container-description{
-    margin-bottom: 10px;
-    font-size: var(--font-size-small);}
-.container-title{
-    margin-bottom: 10px;
+.container-description {
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-small);
 }
-.technology{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+.container-title {
+  margin-bottom: var(--spacing-small);
 }
-.technology-item{
-    width: fit-content;
-    padding: 10px 20px;
-    margin: 10px;
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-main);
-    border-radius: 50px;
-    font-size: var(--font-size-small);
-    cursor: pointer;
+.technology {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: var(--spacing-medium);
+  flex-wrap: wrap;
 }
-.experiences-header{
-    margin-bottom: 20px;
+.technology-item {
+  width: fit-content;
+  padding: var(--spacing-small) var(--spacing-medium);
+  margin: var(--spacing-small);
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-small);
+  cursor: pointer;
+}
+.experiences-header {
+  margin-bottom: var(--spacing-medium);
 }
 
-
-
-
-    @media (min-width: 768px) {
-        .experiences{
-          align-items: start;
-        }
-    }
+@media (min-width: 768px) {
+  .experiences {
+    align-items: start;
+  }
+}

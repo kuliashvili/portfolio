@@ -1,6 +1,5 @@
 :root {
   /* Color Palette */
-  /* --color-black: #071208; */
   --color-black: #000000;
   --color-white: #ffffff;
   --color-thin-purple: #933dc9;
@@ -11,6 +10,7 @@
   --color-main: #5985f6;
   --color-secondary: #3c62c2;
   --color-background: #020c25;
+  --color-background-thin: rgba(255, 255, 255, 0.1);
 
   /* Typography */
   --font-family: "Inter", sans-serif;
@@ -25,8 +25,28 @@
   /* Spacing */
   --spacing-small: 8px;
   --spacing-medium: 16px;
-  --spacing-large: 24px;
+  --spacing-large: 30px;
   --spacing-extra-large: 50px;
+  --spacing: 70px;
+
+  /* Weight */
+  --weight-small: 300;
+  --weight-medium: 600;
+  --weight-bold: 900;
+
+  /* Border Radius */
+  --radius-small: 12px;
+  --radius-full: 200px;
+
+  /* Transition */
+  --transition: all 0.3s ease;
+  --radius-full: 200px;
+
+  /* Letter Spacing */
+  --letter-spacing: 3px;
+
+
+
 
   --max-width: 2560px
 }

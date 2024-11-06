@@ -1,7 +1,7 @@
 .about {
   width: 90%;
   max-width: var(--max-width);
-  margin-bottom: 70px;
+  margin-bottom: var(--spacing);
 
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 .about-header {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
   text-align: center;
 }
 
@@ -18,15 +18,12 @@
   color: var(--color-main);
 }
 
-/* .about-text{
-    text-align: center;
-  } */
 
 .button {
-  margin-top: 20px;
+  margin-top: var(--spacing-medium);
 }
 .about-text {
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
   text-align: center;
 }
 

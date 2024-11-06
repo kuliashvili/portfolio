@@ -3,23 +3,23 @@
 .button {
   min-width: 120px;
   height: 40px;
-  font-size: 16px;
+  font-size: var(--font-size-p);
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: var(--weight-medium);
   background-color: var(--color-main);
-  border-radius: 50px;
-  color: white;
+  border-radius: var(--radius-full);
+  color: var(--color-white);
   border: none;
   cursor: pointer;
   text-align: center;
-  transition: all 0.3s ease;
-  padding: 20px;
+  transition: var(--transition);
+  padding: var(--spacing-medium);
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 3px;
-  color: white;
+  letter-spacing: var(--letter-spacing);
 }
+
 .button:hover {
   background-color: var(--color-secondary);
 }
