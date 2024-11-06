@@ -32,6 +32,7 @@
   /* Weight */
   --weight-small: 300;
   --weight-medium: 600;
+  --weight-big: 700;
   --weight-bold: 900;
 
   /* Border Radius */
@@ -40,13 +41,16 @@
 
   /* Transition */
   --transition: all 0.3s ease;
+
+  /* Border Radius */
   --radius-full: 200px;
 
   /* Letter Spacing */
   --letter-spacing: 3px;
 
+  /* Line Height */
+  --line-height: 1.5;
 
-
-
-  --max-width: 2560px
+  /* Max Width */
+  --max-width: 2560px;
 }

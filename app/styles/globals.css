@@ -51,16 +51,16 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: 1.5;
+  font-family: var(--font-family);
+  color: var(--color-white);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
 }
 
 h1 {
   font-size: var(--font-size-h1);
-  font-weight: 700;
+  font-weight: var(--weight-big);
 }
 
 h2 {
@@ -74,7 +74,7 @@ h3 {
 p {
   font-size: var(--font-size-p);
 }
-a{
+a {
   text-decoration: none;
 }
 
@@ -96,7 +96,7 @@ html {
   width: 500px;
   height: 500px;
   /* background-color: var(--color-thin-purple); */
-  background-color: #0f4ade;
+  background-color: var(--color-main);
   filter: blur(400px);
   border-radius: 50%;
   pointer-events: none;
