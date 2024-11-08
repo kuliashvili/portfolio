@@ -4,7 +4,6 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { useState, useEffect } from "react";
 
-
 export default function RootLayout({ children }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -19,8 +18,8 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en"  >
-      <body className="Portfolio" >
+    <html lang="en">
+      <body className="Portfolio">
         <Header />
         {children}
         <Footer />
