@@ -7,7 +7,6 @@ function AboutPage() {
     <div className="aboutpage">
       <About></About>
       <Skills></Skills>
-      
     </div>
   );
 }
