@@ -2,3 +2,4 @@
 2. language georgian ge/en
 3. about and other pages create.
 4. optimaze images, seo performance
+5. metadata homepage and other pages
