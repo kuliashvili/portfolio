@@ -1,5 +1,5 @@
 # My Portfolio Website
-# Link:  https://gio.kuliashvili.com/
+# Link:  [gio.kuliashvili.com](https://gio.kuliashvili.com/)
 
 Welcome to my **portfolio**! This site showcases my work and experience as a **developer**.
 
@@ -14,4 +14,5 @@ Welcome to my **portfolio**! This site showcases my work and experience as a **d
 - **Contact Information:** Reach out via **email**, **LinkedIn**, or **GitHub**.
 - **Resume:** Download my resume to see my professional journey.
 
-Feel free to explore and connect!
+
+**Note:** The site is still under construction and not yet finished. Feel free to explore and connect!
