@@ -84,7 +84,14 @@ html {
   background-color: var(--color-black);
 }
 .Portfolio {
+  padding-top: 150px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Homepage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

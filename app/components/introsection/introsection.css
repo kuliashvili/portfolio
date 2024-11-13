@@ -1,6 +1,6 @@
 .introsection {
   max-width: var(--max-width);
-  margin-top: var(--spacing);
+  /* margin-top: var(--spacing); */
   margin-bottom: var(--spacing);
   width: 90%;
   display: flex;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 .section-left {
-  margin-top: var(--spacing-extra-large);
+  /* margin-top: var(--spacing-extra-large); */
   display: flex;
   justify-content: center;
   align-items: start;
@@ -57,7 +57,7 @@
   .introsection {
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
   .section-right {
     align-items: start;

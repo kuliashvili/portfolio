@@ -98,7 +98,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h1 className="contact-title">Get in Touch with Me</h1>
+      <h2 className="contact-title">Get in Touch with Me</h2>
 
       <div className="contact-content">
         <div className="contact-form-wrapper">
@@ -177,7 +177,12 @@ const Contact = () => {
           <h2 className="contact-info-title">Contact Information</h2>
           <div className="contact-info-item">
             <h3>Email</h3>
-            <a href="mailto:giorgi.kuliashvili.1@btu.edu.ge">
+            <a
+              style={{
+                wordWrap: "break-word",
+              }}
+              href="mailto:giorgi.kuliashvili.1@btu.edu.ge"
+            >
               giorgi.kuliashvili.1@btu.edu.ge
             </a>
           </div>
