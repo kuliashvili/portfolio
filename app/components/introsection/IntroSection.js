@@ -5,14 +5,16 @@ function IntroSection() {
   return (
     <div className="introsection">
       <div className="section-left">
-        <Image
-          className="profile-picture"
-          src={Profile}
-          width={500}
-          height={500}
-          alt="Profile Picture"
-          priority={true}
-        ></Image>
+        <div className="border-animate circle border-2 image-wrapper">
+          <Image
+            className="profile-picture"
+            src={Profile}
+            width={500}
+            height={500}
+            alt="Profile Picture"
+            priority={true}
+          ></Image>
+        </div>
       </div>
       <div className="section-right">
         <p className="profile-description">Hi, I am Giorgi</p>

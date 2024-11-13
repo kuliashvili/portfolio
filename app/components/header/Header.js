@@ -16,7 +16,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <header className="header">
+    <header className="header line-animate bottom line-1">
       <div className="header-desktop">
         <div className="header-logo">
           {/* <a className="header-logo-image" href="/">

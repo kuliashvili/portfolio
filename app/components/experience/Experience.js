@@ -11,7 +11,7 @@ function Container() {
         rel="noopener noreferrer"
         className="experience-link"
       >
-        <div className="experience">
+        <div className="experience border-animate border-1">
           <p className="container-description">May 2024 – Present</p>
           <h3 className="container-title">Frontend Developer</h3>
           <p className="container-description">
@@ -39,7 +39,7 @@ function Container() {
         rel="noopener noreferrer"
         className="experience-link"
       >
-        <div className="experience">
+        <div className="experience border-animate border-1">
           <p className="container-description">Aug 2023 – May 2024</p>
           <h3 className="container-title">Junior Frontend Developer</h3>
           <p className="container-description">
@@ -70,7 +70,7 @@ function Container() {
         rel="noopener noreferrer"
         className="project-link"
       >
-        <div className="experience">
+        <div className="experience border-animate border-1">
           <h3 className="container-title">gamoitsani.info</h3>
           <p className="container-description">
             Gamoitsani.info is the official site for the Gamoitsani iOS app,
@@ -93,7 +93,7 @@ function Container() {
         rel="noopener noreferrer"
         className="project-link"
       >
-        <div className="experience">
+        <div className="experience border-animate border-1">
           <h3 className="container-title">plintus.ge</h3>
           <p className="container-description">
             Plintus.ge is an informative website about baseboards, designed and

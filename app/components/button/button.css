@@ -6,20 +6,43 @@
   font-size: var(--font-size-p);
   font-family: var(--font-family);
   font-weight: var(--weight-medium);
-  background-color: var(--color-main);
   border-radius: var(--radius-full);
   color: var(--color-white);
   border: none;
   cursor: pointer;
   text-align: center;
-  transition: var(--transition);
   padding: var(--spacing-medium);
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: var(--letter-spacing);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+.button.stream {
+  background: linear-gradient(
+    90deg,
+    var(--color-main) 0%,
+    color-mix(in srgb, var(--color-main) 70%, var(--color-magneta)) 25%,
+    var(--color-magneta) 50%,
+    color-mix(in srgb, var(--color-main) 30%, var(--color-magneta)) 75%,
+    var(--color-main) 100%
+  );
+  background-size: 200% 100%;
+  animation: silentStream 50s linear infinite;
+}
+
+@keyframes silentStream {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
 }
 
 .button:hover {
-  background-color: var(--color-secondary);
+  transform: translateY(-2px);
 }

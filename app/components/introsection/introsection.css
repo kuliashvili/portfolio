@@ -9,17 +9,22 @@
   align-items: center;
 }
 .section-left {
-  /* margin-top: var(--spacing-extra-large); */
   display: flex;
   justify-content: center;
   align-items: start;
 }
-.profile-picture {
+.image-wrapper {
   max-width: 300px;
   width: 60%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-picture {
+  width: 100%;
+  height: auto;
   /* border: 2px solid #84a3f2; */
-  border: 2px solid var(--color-main);
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: var(--transition);
@@ -57,7 +62,6 @@
   .introsection {
     flex-direction: row-reverse;
     justify-content: space-between;
-    /* margin-top: 150px; */
   }
   .section-right {
     align-items: start;

@@ -80,7 +80,6 @@ a {
 
 html {
   overflow-x: hidden;
-  /* background-color: var(--color-background); */
   background-color: var(--color-black);
 }
 .Portfolio {
@@ -103,11 +102,117 @@ html {
   width: 500px;
   height: 500px;
   background-color: blue;
-  /* background-color: var(--color-main); */
   filter: blur(400px);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
   z-index: -1;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes line-scroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.border-animate {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.border-animate::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+        var(--color-background-thin),
+        var(--color-background-thin)
+      )
+      padding-box,
+    conic-gradient(
+        from var(--angle),
+        var(--color-main),
+        var(--color-magneta),
+        var(--color-main)
+      )
+      border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: rotate-border 4s linear infinite;
+  z-index: -1;
+}
+
+/* For circular borders */
+.border-animate.circle::before {
+  border-radius: 50%;
+}
+
+.border-animate.border-1::before {
+  inset: -1px;
+  border: 1px solid transparent;
+}
+.border-animate.border-2::before {
+  inset: -2px;
+  border: 2px solid transparent;
+}
+
+/* Bottom line animation */
+.bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--color-main),
+    var(--color-magneta),
+    var(--color-main),
+    var(--color-magneta),
+    var(--color-main)
+  );
+  background-size: 200% 100%;
+  animation: line-scroll 4s linear infinite;
+}
+/* Top line animation */
+.top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--color-main),
+    var(--color-magneta),
+    var(--color-main),
+    var(--color-magneta),
+    var(--color-main)
+  );
+  background-size: 200% 100%;
+  animation: line-scroll 4s linear infinite;
+}
+
+.line-animate.line-2::after {
+  height: 2px;
 }

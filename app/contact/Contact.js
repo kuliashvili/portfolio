@@ -101,7 +101,7 @@ const Contact = () => {
       <h2 className="contact-title">Get in Touch with Me</h2>
 
       <div className="contact-content">
-        <div className="contact-form-wrapper">
+        <div className="contact-form-wrapper border-animate border-1">
           <form noValidate onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -173,7 +173,7 @@ const Contact = () => {
           )}
         </div>
 
-        <div className="contact-info">
+        <div className="contact-info border-animate border-1">
           <h2 className="contact-info-title">Contact Information</h2>
           <div className="contact-info-item">
             <h3>Email</h3>
