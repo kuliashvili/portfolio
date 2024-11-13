@@ -12,7 +12,7 @@
   padding: var(--spacing-medium);
   border-radius: var(--radius-small);
   background-color: var(--color-background-thin);
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-main);
   backdrop-filter: blur(10px);
   margin-bottom: var(--spacing-medium);
 }

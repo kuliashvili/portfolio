@@ -6,6 +6,7 @@ import IntroSection from "./components/introsection/IntroSection";
 import Skills from "./components/skills/Skills";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
+import Contact from "./contact/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <Skills></Skills>  */}
       <About></About>
       <Experience></Experience>
+      <Contact></Contact>
     </div>
   );
 }

@@ -6,10 +6,5 @@ export const metadata = {
 };
 
 export default function PortfolioPage() {
-  return (
-    <main>
-      <Contact />
-    </main>
-  );
+  return <Contact />;
 }
-
