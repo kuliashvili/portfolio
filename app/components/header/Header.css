@@ -6,7 +6,7 @@
   z-index: 10;
   height: 80px;
   background-color: var(--color-background-thin);
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-main);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@
   width: 50%;
   height: 100vh;
   transition: right 0.3s ease;
-  border-left: 1px solid var(--color-white);
+  border-left: 1px solid var(--color-main);
 }
 .mobile-nav.open {
   right: 0;

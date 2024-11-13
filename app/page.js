@@ -10,7 +10,7 @@ import Contact from "./contact/Contact";
 
 export default function Home() {
   return (
-    <div className="Portfolio">
+    <div className="Homepage">
       <IntroSection></IntroSection>
       {/* <Skills></Skills>  */}
       <About></About>
