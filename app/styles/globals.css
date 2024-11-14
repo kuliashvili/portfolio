@@ -150,7 +150,7 @@ html {
     conic-gradient(
         from var(--angle),
         var(--color-main),
-        var(--color-magneta),
+        var(--color-white),
         var(--color-main)
       )
       border-box;
@@ -185,9 +185,9 @@ html {
   background: linear-gradient(
     to right,
     var(--color-main),
-    var(--color-magneta),
+    var(--color-white),
     var(--color-main),
-    var(--color-magneta),
+    var(--color-white),
     var(--color-main)
   );
   background-size: 200% 100%;
@@ -204,9 +204,9 @@ html {
   background: linear-gradient(
     to right,
     var(--color-main),
-    var(--color-magneta),
+    var(--color-white),
     var(--color-main),
-    var(--color-magneta),
+    var(--color-white),
     var(--color-main)
   );
   background-size: 200% 100%;

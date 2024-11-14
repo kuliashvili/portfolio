@@ -34,7 +34,7 @@ const Contact = () => {
     }
 
     if (!captchaToken) {
-      newErrors.captcha = "Please verify that you're not a robot";
+      newErrors.captcha = "Bot check is required";
     }
 
     setErrors(newErrors);
