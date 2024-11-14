@@ -47,7 +47,7 @@ function About() {
           Trips2Share
         </a>
         . Along the way, I completed a frontend mentorship at Exadel, earned a
-        Google UX certificate from Coursera, and am now in my final year at BTU,
+        Google UX certificate from Coursera, and now in my final year at BTU,
         Business and Technology University.
       </p>
       <p className="about-text">
