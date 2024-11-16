@@ -8,6 +8,12 @@ import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Contact from "./contact/Contact";
 
+export const metadata = {
+  title: "Giorgi Kuliashvili | Frontend Developer",
+  description:
+    "Explore my journey as a Frontend Developer and see how I build fast, visually appealing websites",
+};
+
 export default function Home() {
   return (
     <div className="Homepage">

@@ -2,6 +2,11 @@ import "./about.css";
 import About from "../components/about/About";
 import Skills from "../components/skills/Skills";
 
+export const metadata = {
+  title: "About me",
+  description: "Info about me as  frontend developer",
+};
+
 function AboutPage() {
   return (
     <div className="aboutpage">
