@@ -1,4 +1,5 @@
 "use client";
+import "./blog.css"
 
 import { useState } from "react";
 

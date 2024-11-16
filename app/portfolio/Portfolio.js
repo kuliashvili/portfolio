@@ -1,4 +1,5 @@
 "use client";
+import "./portfolio.css"
 
 import { useState } from "react";
 
