@@ -6,10 +6,5 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  return (
-    <main>
-      <Blog />
-    </main>
-  );
+  return <Blog />;
 }
-
