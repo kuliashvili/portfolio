@@ -90,7 +90,7 @@ function Header() {
           ></Image>
         </button>
 
-        <nav className={`mobile-nav ${isMenuOpen ? "open" : "closed"}`}>
+        <nav className={`mobile-nav left  ${isMenuOpen ? "open" : "closed"}`}>
           <button className="burger-close-menu" onClick={toggleMenu}>
             <Image
               src={BurgerClose}

@@ -216,3 +216,37 @@ html {
 .line-animate.line-2::after {
   height: 2px;
 }
+
+/* Left line animation */
+.left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-main),
+    var(--color-white),
+    var(--color-main),
+    var(--color-white),
+    var(--color-main)
+  );
+  background-size: 100% 200%;
+  animation: left-line-scroll 4s linear infinite;
+}
+
+@keyframes left-line-scroll {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 200%;
+  }
+}
+
+
+.line-animate.line-2.left::after {
+  width: 2px;
+}

@@ -64,6 +64,7 @@
   height: 100vh;
   transition: right 0.3s ease;
   border-left: 1px solid var(--color-main);
+  z-index: 10;
 }
 .mobile-nav.open {
   right: 0;
