@@ -7,22 +7,46 @@
   max-width: var(--max-width);
   margin-bottom: var(--spacing);
 }
-
+.experience-link,
+.project-link {
+  width: 100%;
+}
 .experience {
-  padding: var(--spacing-medium);
+  /* padding: var(--spacing-medium); */
   border-radius: var(--radius-small);
   background-color: var(--color-background-thin);
   border: 1px solid var(--color-main);
   backdrop-filter: blur(10px);
   margin-bottom: var(--spacing-medium);
+  width: 100%;
+}
+.experience-inner {
+  margin: var(--spacing-medium);
 }
 .container-description {
   margin-bottom: var(--spacing-small);
   font-size: var(--font-size-small);
 }
+
 .container-title {
   margin-bottom: var(--spacing-small);
 }
+
+.experience-list {
+  margin: var(--spacing-small) 0;
+  padding-left: var(--font-size-small);
+}
+
+.experience-list li {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-small);
+  line-height: 1.5;
+  color: inherit;
+}
+.experience-list li::marker {
+  color: var(--color-main);
+}
+
 .technology {
   display: flex;
   justify-content: start;
@@ -30,6 +54,7 @@
   margin-top: var(--spacing-medium);
   flex-wrap: wrap;
 }
+
 .technology-item {
   width: fit-content;
   padding: var(--spacing-small) var(--spacing-medium);
@@ -43,6 +68,7 @@
   font-size: var(--font-size-small);
   cursor: pointer;
 }
+
 .experiences-header {
   margin-bottom: var(--spacing-medium);
 }

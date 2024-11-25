@@ -12,23 +12,38 @@ function Container() {
         className="experience-link"
       >
         <div className="experience border-animate border-1">
-          <p className="container-description">May 2024 – Present</p>
-          <h3 className="container-title">Frontend Developer</h3>
-          <p className="container-description">
-            Redesigned the entire website, including the main site and admin
-            panel, making it fully responsive. Developed a design system to
-            ensure consistency across fonts, colors, and spacing. Added new
-            features to enhance the website, introduced ideas to improve user
-            experience, and implemented these changes. Collaborated with the
-            team to troubleshoot and resolve issues, continually improving the
-            website for seamless operation.
-          </p>
-          <div className="technology">
-            <div className="technology-item">Html</div>
-            <div className="technology-item">Css</div>
-            <div className="technology-item">JavaScript</div>
-            <div className="technology-item">React.cs</div>
-            <div className="technology-item">Next.js</div>
+          <div className="experience-inner">
+            <p className="container-description">May 2024 – Present</p>
+            <h3 className="container-title">Frontend Developer</h3>
+            <ul className="experience-list">
+              <li>
+                Led complete website redesign, including main site and admin
+                panel, with full responsive implementation
+              </li>
+              <li>
+                Developed and implemented a comprehensive design system for
+                consistent fonts, colors, and spacing
+              </li>
+              <li>
+                Introduced and implemented new features to enhance user
+                experience
+              </li>
+              <li>
+                Collaborated effectively with team members to identify and
+                resolve technical issues
+              </li>
+              <li>
+                Contributed to continuous website improvement through iterative
+                development and optimization
+              </li>
+            </ul>
+            <div className="technology">
+              <div className="technology-item">Html</div>
+              <div className="technology-item">Css</div>
+              <div className="technology-item">JavaScript</div>
+              <div className="technology-item">React.cs</div>
+              <div className="technology-item">Next.js</div>
+            </div>
           </div>
         </div>
       </Link>
@@ -40,23 +55,35 @@ function Container() {
         className="experience-link"
       >
         <div className="experience border-animate border-1">
-          <p className="container-description">Aug 2023 – May 2024</p>
-          <h3 className="container-title">Junior Frontend Developer</h3>
-          <p className="container-description">
-            Updated and maintained the company&apos;s website and admin panel
-            with a focus on functionality and UX improvements. Contributed
-            design ideas and features, translating them into effective web
-            designs. Actively participated in team meetings to brainstorm ideas,
-            solve challenges, and meet project goals.
-          </p>
-          <div className="technology">
-            <div className="technology-item">Html</div>
-            <div className="technology-item">Css</div>
-            <div className="technology-item">JavaScript</div>
-            <div className="technology-item">Git</div>
-            <div className="technology-item">Figma</div>
-            <div className="technology-item">WordPress</div>
-            <div className="technology-item">Shopify</div>
+          <div className="experience-inner">
+            <p className="container-description">Aug 2023 – May 2024</p>
+            <h3 className="container-title">Junior Frontend Developer</h3>
+            <ul className="experience-list">
+              <li>
+                Maintained and enhanced company website and admin panel with
+                focus on UX improvements
+              </li>
+              <li>
+                Proposed and implemented new design features to enhance user
+                experience
+              </li>
+              <li>
+                Translated design concepts into functional web implementations
+              </li>
+              <li>
+                Participated actively in team meetings for ideation and
+                problem-solving sessions
+              </li>
+            </ul>
+            <div className="technology">
+              <div className="technology-item">Html</div>
+              <div className="technology-item">Css</div>
+              <div className="technology-item">JavaScript</div>
+              <div className="technology-item">Git</div>
+              <div className="technology-item">Figma</div>
+              <div className="technology-item">WordPress</div>
+              <div className="technology-item">Shopify</div>
+            </div>
           </div>
         </div>
       </Link>
@@ -71,19 +98,29 @@ function Container() {
         className="project-link"
       >
         <div className="experience border-animate border-1">
-          <h3 className="container-title">gamoitsani.info</h3>
-          <p className="container-description">
-            Gamoitsani.info is the official site for the Gamoitsani iOS app,
-            providing all the app&apos;s details and how to use it. I fully
-            designed and built the site from scratch, with a clean color scheme
-            for an easy and enjoyable browsing experience
-          </p>
-          <div className="technology">
-            <div className="technology-item">Html</div>
-            <div className="technology-item">Css</div>
-            <div className="technology-item">JavaScript</div>
-            <div className="technology-item">Git</div>
-            <div className="technology-item">Figma</div>
+          <div className="experience-inner">
+            <h3 className="container-title">gamoitsani.info</h3>
+            <ul className="experience-list">
+              <li>
+                Designed and developed the official website for Gamoitsani iOS
+                app from scratch
+              </li>
+              <li>
+                Implemented clean and intuitive user interface with carefully
+                selected color scheme
+              </li>
+              <li>
+                Created comprehensive app documentation and user guidance
+                content
+              </li>
+            </ul>
+            <div className="technology">
+              <div className="technology-item">Html</div>
+              <div className="technology-item">Css</div>
+              <div className="technology-item">JavaScript</div>
+              <div className="technology-item">Git</div>
+              <div className="technology-item">Figma</div>
+            </div>
           </div>
         </div>
       </Link>
@@ -94,19 +131,28 @@ function Container() {
         className="project-link"
       >
         <div className="experience border-animate border-1">
-          <h3 className="container-title">plintus.ge</h3>
-          <p className="container-description">
-            Plintus.ge is an informative website about baseboards, designed and
-            developed to meet the client&apos;s needs. I handled the entire
-            design process, from choosing the color scheme to building the site,
-            ensuring a cohesive and attractive look
-          </p>
-          <div className="technology">
-            <div className="technology-item">Html</div>
-            <div className="technology-item">Css</div>
-            <div className="technology-item">JavaScript</div>
-            <div className="technology-item">Git</div>
-            <div className="technology-item">WordPress</div>
+          <div className="experience-inner">
+            <h3 className="container-title">plintus.ge</h3>
+            <ul className="experience-list">
+              <li>
+                Designed and developed a comprehensive baseboard information
+                website
+              </li>
+              <li>
+                Led complete design process from color scheme selection to site
+                implementation
+              </li>
+              <li>
+                Created custom WordPress theme to match client specifications
+              </li>
+            </ul>
+            <div className="technology">
+              <div className="technology-item">Html</div>
+              <div className="technology-item">Css</div>
+              <div className="technology-item">JavaScript</div>
+              <div className="technology-item">Git</div>
+              <div className="technology-item">WordPress</div>
+            </div>
           </div>
         </div>
       </Link>
