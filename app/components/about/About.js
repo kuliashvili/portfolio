@@ -62,8 +62,8 @@ function About() {
         </a>{" "}
         or download my resume below.
       </p>
-      <a href="/giorgi_kuliashvili_resume.pdf" download>
-        <Button className="button">Download Resume</Button>
+      <a target="_blank" href="/giorgi_kuliashvili_resume.pdf">
+        <Button className="button">Open Resume</Button>
       </a>
     </div>
   );
