@@ -1,6 +1,8 @@
 import "./introsection.css";
 import Image from "next/image";
 import Profile from "../../../public/assets/profile.webp";
+import Button from "../button/Button";
+
 function IntroSection() {
   return (
     <div className="introsection">
@@ -25,12 +27,9 @@ function IntroSection() {
           I enjoy building web products that perform well, look great, and
           provide a good user experience. Feel free to reach out to me at
           <br></br>
-          <a
-            href="mailto:giorgi.kuliashvili.1@btu.edu.ge"
-            className="email-link"
-          >
-            giorgi.kuliashvili.1@btu.edu.ge
-          </a>
+          <a className="homebutton-container"  target="_blank" href="/giorgi_kuliashvili_resume.pdf">
+        <Button className="button">Open Resume</Button>
+      </a>
         </p>
       </div>
     </div>

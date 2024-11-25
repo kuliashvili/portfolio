@@ -52,10 +52,13 @@
   text-align: center;
 }
 .profile-subheader {
-  margin: var(--spacing-medium);
-  margin-left: 0;
-  margin-right: 0;
   text-align: center;
+}
+.homebutton-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-medium);
 }
 
 @media (min-width: 768px) {
@@ -79,5 +82,8 @@
     width: 50%;
     margin: 0;
     /* justify-content: end; */
+  }
+  .homebutton-container{
+    justify-content: start;
   }
 }

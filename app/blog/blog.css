@@ -1,23 +1,23 @@
 .blogs {
-    width: 90%;
-    max-width: var(--max-width);
-    text-align: center;
+  width: 90%;
+  max-width: var(--max-width);
+  text-align: center;
 }
 
 .blog-header {
-    margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
 }
 
 .coding-image {
-    margin-top: var(--spacing-large);
-    animation: rotate 14s linear infinite;
+  margin-top: var(--spacing-extra-large);
+  animation: rotate 14s linear infinite;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
