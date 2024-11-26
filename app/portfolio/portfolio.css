@@ -1,0 +1,90 @@
+.portfolio-container {
+  min-width: 90%;
+  max-width: var(--max-width);
+}
+
+.portfolio-header {
+  margin-bottom: var(--spacing-large);
+}
+
+.table-container {
+  overflow-x: auto;
+  background: var(--color-background-thin);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--color-main);
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  padding: var(--spacing-medium);
+  text-align: left;
+}
+
+.portfolio-table th {
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-main);
+}
+
+.portfolio-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.date-cell {
+  white-space: nowrap;
+  color: var(--text-color-light);
+}
+
+.title-cell {
+  font-weight: 500;
+}
+
+.built-with-cell {
+  color: var(--text-color-light);
+}
+
+.links-cell {
+  display: flex;
+  gap: var(--spacing-small);
+}
+
+.link-icon {
+  padding: var(--spacing-small);
+  border-radius: var(--radius-full);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-icon:hover {
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-container {
+    width: 95%;
+    padding: var(--spacing-small);
+  }
+
+  .table-container {
+    border-radius: var(--radius-small);
+    margin: 0 -var(--spacing-small);
+  }
+
+  .portfolio-table th,
+  .portfolio-table td {
+    padding: var(--spacing-small);
+  }
+}
