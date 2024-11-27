@@ -51,7 +51,7 @@ const projects = [
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="project-card">
+    <div className="project-card border-animate border-1">
       <div className="image-container">
         <Image
           src={project.coverImage}

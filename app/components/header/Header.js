@@ -1,6 +1,6 @@
 "use client";
 import "./Header.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import BurgerMenu from "../../../public/assets/burger-menu.svg";
 import BurgerClose from "../../../public/assets/burger-close.svg";
 import GithubIcon from "../../../public/assets/github.svg";
@@ -11,17 +11,35 @@ import Link from "next/link";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const mobileNavRef = useRef(null);
+  const burgerButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen &&
+        mobileNavRef.current &&
+        !mobileNavRef.current.contains(event.target) &&
+        !burgerButtonRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="header line-animate bottom line-1">
       <div className="header-desktop">
         <div className="header-logo">
-          {/* <a className="header-logo-image" href="/">
-            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
-          </a> */}
           <Link className="header-logo-image" href="/">
             <Image src={Logo} width={30} height={30} alt="Logo"></Image>
           </Link>
@@ -81,7 +99,11 @@ function Header() {
             <Image src={Logo} width={30} height={30} alt="Logo"></Image>
           </Link>
         </div>
-        <button className="burger-menu" onClick={toggleMenu}>
+        <button
+          className="burger-menu"
+          onClick={toggleMenu}
+          ref={burgerButtonRef}
+        >
           <Image
             src={BurgerMenu}
             width={25}
@@ -90,7 +112,10 @@ function Header() {
           ></Image>
         </button>
 
-        <nav className={`mobile-nav left  ${isMenuOpen ? "open" : "closed"}`}>
+        <nav
+          className={`mobile-nav left ${isMenuOpen ? "open" : "closed"}`}
+          ref={mobileNavRef}
+        >
           <button className="burger-close-menu" onClick={toggleMenu}>
             <Image
               src={BurgerClose}
@@ -101,19 +126,29 @@ function Header() {
           </button>
           <ul className="mobile-nav-links">
             <li className="nav-item">
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about">About</Link>
+              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </Link>
             </li>
             <li className="nav-item">
-              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/portfolio" onClick={() => setIsMenuOpen(false)}>
+                Portfolio
+              </Link>
             </li>
             <li className="nav-item">
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" onClick={() => setIsMenuOpen(false)}>
+                Blog
+              </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>

@@ -31,7 +31,7 @@ export default function Blog() {
         not just a blog, but a resource for fellow developers, designers, and
         anyone interested in web technologies.
       </p>
-      <div className="image-container">
+      {/* <div className="image-container">
         <Image
           className="coding-image"
           src={Coding}
@@ -39,7 +39,7 @@ export default function Blog() {
           height={250}
           alt="Coding Image"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
