@@ -51,4 +51,6 @@
 
   /* Max Width */
   --max-width: 2560px;
+
+  --color-main-rgb: 0, 0, 0;
 }

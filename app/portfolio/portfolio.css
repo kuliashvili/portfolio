@@ -1,90 +1,164 @@
 .portfolio-container {
-  min-width: 90%;
+  width: 90%;
   max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .portfolio-header {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.table-container {
-  overflow-x: auto;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.project-card {
   background: var(--color-background-thin);
-  border-radius: var(--radius-small);
-  border: 1px solid var(--color-main);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-table {
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
   width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
+  height: 250px;
+  overflow: hidden;
 }
 
-.portfolio-table th,
-.portfolio-table td {
-  padding: var(--spacing-medium);
-  text-align: left;
+.project-image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.portfolio-table th {
-  font-weight: 600;
-  border-bottom: 1px solid var(--color-main);
+.project-card:hover .project-image {
+  transform: scale(1.1);
 }
 
-.portfolio-table tr {
-  transition: background-color 0.3s ease;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(var(--color-main-rgb), 0.3),
+    rgba(var(--color-main-rgb), 0.3)
+  );
+  transition: background 0.3s ease;
 }
 
-.portfolio-table tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+.project-card:hover .overlay {
+  background: linear-gradient(
+    rgba(var(--color-main-rgb), 0.1),
+    rgba(var(--color-main-rgb), 0.1)
+  );
 }
 
-.date-cell {
-  white-space: nowrap;
-  color: var(--text-color-light);
-}
-
-.title-cell {
-  font-weight: 500;
-}
-
-.built-with-cell {
-  color: var(--text-color-light);
-}
-
-.links-cell {
-  display: flex;
-  gap: var(--spacing-small);
-}
-
-.link-icon {
-  padding: var(--spacing-small);
-  border-radius: var(--radius-full);
-  transition: all 0.3s ease;
+.links-container {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-.link-icon:hover {
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  transform: translateY(-2px);
+.project-card:hover .links-container {
+  opacity: 1;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-main);
+  border-radius: 50%;
+  color: var(--color-background);
+  transition: transform 0.3s ease;
+}
+
+.link-button:hover {
+  transform: scale(1.1);
+}
+
+.link-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-date {
+  color: var(--text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.built-with {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--color-main);
+  color: var(--color-background);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .portfolio-container {
     width: 95%;
-    padding: var(--spacing-small);
+    padding: 1rem;
   }
 
-  .table-container {
-    border-radius: var(--radius-small);
-    margin: 0 -var(--spacing-small);
+  .portfolio-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
-  .portfolio-table th,
-  .portfolio-table td {
-    padding: var(--spacing-small);
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
