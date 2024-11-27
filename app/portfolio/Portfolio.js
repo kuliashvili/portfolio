@@ -1,6 +1,6 @@
 "use client";
+
 import "./portfolio.css";
-import { useState } from "react";
 import Github from "@/public/assets/github.svg";
 import Link from "@/public/assets/link.svg";
 import Image from "next/image";
@@ -48,46 +48,50 @@ export default function Portfolio() {
         <table className="portfolio-table">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Title</th>
-              <th>Built with</th>
-              <th>Links</th>
+              <th scope="col">DATE</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">BUILT WITH</th>
+              <th scope="col">LINKS</th>
             </tr>
           </thead>
           <tbody>
             {projects.map((project, index) => (
-              <tr key={index}>
+              <tr key={`${project.title}-${index}`}>
                 <td className="date-cell">{project.date}</td>
                 <td className="title-cell">{project.title}</td>
                 <td className="built-with-cell">
                   {project.builtWith.join(" · ")}
                 </td>
                 <td className="links-cell">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-icon"
-                  >
-                    <Image
-                      src={Github}
-                      width={20}
-                      height={20}
-                      alt="github icon"
-                    />
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-icon"
+                      aria-label={`GitHub repository for ${project.title}`}
+                    >
+                      <Image
+                        src={Github}
+                        width={20}
+                        height={20}
+                        alt="GitHub icon"
+                      />
+                    </a>
+                  )}
                   {project.websiteUrl && (
                     <a
                       href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-icon"
+                      aria-label={`Live website for ${project.title}`}
                     >
                       <Image
                         src={Link}
                         width={20}
                         height={20}
-                        alt="website link icon"
+                        alt="Website link icon"
                       />
                     </a>
                   )}
