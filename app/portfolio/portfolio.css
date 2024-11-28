@@ -23,8 +23,12 @@
 .project-card {
   background: var(--color-background-thin);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border: none;
+  display: inline-block;
 }
 
 .project-card:hover {
@@ -37,6 +41,7 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 
 .project-image {
@@ -137,6 +142,7 @@
   .portfolio-container {
     width: 95%;
     padding: 1rem;
+    padding-top: 0;
   }
 
   .portfolio-header {

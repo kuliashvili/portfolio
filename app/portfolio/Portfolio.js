@@ -43,15 +43,14 @@ const projects = [
     date: "02/06/2024",
     title: "Budgetify",
     builtWith: ["React.js", "CSS", "MongoDB"],
-    githubUrl:
-      "https://github.com/kuliashvili/Budgetify/tree/feature/project-initialization",
+    githubUrl: "https://github.com/kuliashvili/Budgetify/tree/feature/project-initialization",
     coverImage: portfolio5,
   },
 ];
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="project-card border-animate border-1">
+    <div className="project-card border-animate border-2">
       <div className="image-container">
         <Image
           src={project.coverImage}
@@ -60,7 +59,6 @@ const ProjectCard = ({ project }) => {
           fill
         />
         <div className="overlay" />
-
         <div className="links-container">
           {project.githubUrl && (
             <a
@@ -70,12 +68,7 @@ const ProjectCard = ({ project }) => {
               className="link-button"
               aria-label="View GitHub repository"
             >
-              <Image
-                src={Github}
-                width={20}
-                height={20}
-                alt="github icon"
-              ></Image>
+              <Image src={Github} width={20} height={20} alt="github icon" />
             </a>
           )}
           {project.websiteUrl && (
@@ -86,7 +79,7 @@ const ProjectCard = ({ project }) => {
               className="link-button"
               aria-label="Visit live website"
             >
-              <Image src={Link} width={20} height={20} alt="link icon"></Image>
+              <Image src={Link} width={20} height={20} alt="link icon" />
             </a>
           )}
         </div>
@@ -108,12 +101,12 @@ const ProjectCard = ({ project }) => {
 
 export default function Portfolio() {
   return (
-    <div className="portfolio-container">
-      <h1 className="portfolio-header">Portfolio</h1>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <ProjectCard key={`${project.title}-${index}`} project={project} />
-        ))}
+      <div className="portfolio-container">
+        <h1 className="portfolio-header">Portfolio</h1>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <ProjectCard key={`${project.title}-${index}`} project={project} />
+          ))}
       </div>
     </div>
   );
