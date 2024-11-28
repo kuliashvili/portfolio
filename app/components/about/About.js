@@ -1,10 +1,12 @@
 import "./About.css";
 import Button from "../button/Button";
 
-function About() {
+function About({ headingLevel = "h1" }) {
+  const Heading = headingLevel;
+
   return (
     <div className="about">
-      <h2 className="about-header">About Me</h2>
+      <Heading className="about-header">About Me</Heading>
       <p className="about-text">
         In 2023, I began my journey in web development, starting with HTML, CSS,
         and JavaScript. Then I moved on to React and Next.js, at the same time

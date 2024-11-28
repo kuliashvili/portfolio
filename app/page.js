@@ -19,9 +19,9 @@ export default function Home() {
     <div className="Homepage">
       <IntroSection></IntroSection>
       {/* <Skills></Skills>  */}
-      <About></About>
+      <About headingLevel="h2"></About>
       <Experience></Experience>
-      <Contact></Contact>
+      <Contact headingLevel="h2" ></Contact>
     </div>
   );
 }

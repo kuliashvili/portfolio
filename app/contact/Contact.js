@@ -5,7 +5,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.css";
 import Button from "../components/button/Button";
 
-const Contact = () => {
+const Contact = ({headingLevel}) => {
+  const Heading = headingLevel
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -98,7 +99,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h2 className="contact-title">Get in Touch with Me</h2>
+      <Heading className="contact-title">Get in Touch with Me</Heading>
 
       <div className="contact-content">
         <div className="contact-form-wrapper border-animate border-1">

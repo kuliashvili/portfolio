@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function PortfolioPage() {
-  return <Contact />;
+  return <Contact headingLevel="h1" />;
 }

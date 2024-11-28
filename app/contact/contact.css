@@ -24,7 +24,7 @@
   width: 57%;
   flex: 1;
   background: var(--color-background-thin);
-  padding: var(--spacing-large);
+  padding: var(--spacing-medium);
   border-radius: var(--radius-small);
   backdrop-filter: blur(10px);
 }
@@ -37,7 +37,7 @@
 .contact-info {
   width: 43%;
   background: var(--color-background-thin);
-  padding: var(--spacing-large);
+  padding: var(--spacing-medium);
   border-radius: var(--radius-small);
   backdrop-filter: blur(10px);
 }
@@ -149,13 +149,13 @@
   }
 
   .contact-info {
-    width: calc(90% - 60px);
+    width: 90%;
 
     order: 2;
   }
 
   .contact-form-wrapper {
     order: 1;
-    width: calc(90% - 60px);
+    width: 90%;
   }
 }
