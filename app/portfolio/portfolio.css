@@ -3,6 +3,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 0;
 }
 
 .portfolio-header {

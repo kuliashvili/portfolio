@@ -89,11 +89,12 @@ html {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  position: relative;
 }
 .Homepage {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
 }
 
