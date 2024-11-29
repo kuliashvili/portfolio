@@ -43,7 +43,8 @@ const projects = [
     date: "02/06/2024",
     title: "Budgetify",
     builtWith: ["React.js", "CSS", "MongoDB"],
-    githubUrl: "https://github.com/kuliashvili/Budgetify/tree/feature/project-initialization",
+    githubUrl:
+      "https://github.com/kuliashvili/Budgetify/tree/feature/project-initialization",
     coverImage: portfolio5,
   },
 ];
@@ -101,12 +102,12 @@ const ProjectCard = ({ project }) => {
 
 export default function Portfolio() {
   return (
-      <div className="portfolio-container">
-        <h1 className="portfolio-header">Portfolio</h1>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={`${project.title}-${index}`} project={project} />
-          ))}
+    <div className="portfolio-container">
+      <h1 className="portfolio-header">Portfolio</h1>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={`${project.title}-${index}`} project={project} />
+        ))}
       </div>
     </div>
   );
