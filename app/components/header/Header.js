@@ -1,6 +1,8 @@
 "use client";
 import "./Header.css";
 import { useState, useEffect, useRef } from "react";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 import BurgerMenu from "../../../public/assets/burger-menu.svg";
 import BurgerClose from "../../../public/assets/burger-close.svg";
 import GithubIcon from "../../../public/assets/github.svg";
@@ -8,9 +10,13 @@ import LinkedinIcon from "../../../public/assets/linkedin.svg";
 import Logo from "../../../public/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import geFlag from "@/public/assets/geflag.svg";
+import enFlag from "@/public/assets/enflag.svg";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { currentLanguage, toggleLanguage } = useLanguage();
+  const t = translations[currentLanguage];
   const mobileNavRef = useRef(null);
   const burgerButtonRef = useRef(null);
 
@@ -41,25 +47,25 @@ function Header() {
       <div className="header-desktop">
         <div className="header-logo">
           <Link className="header-logo-image" href="/">
-            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+            <Image src={Logo} width={30} height={30} alt="Logo" />
           </Link>
         </div>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="nav-item">
-              <Link href="/">Home</Link>
+              <Link href="/">{t.nav.home}</Link>
             </li>
             <li className="nav-item">
-              <Link href="/about">About</Link>
+              <Link href="/about">{t.nav.about}</Link>
             </li>
             <li className="nav-item">
-              <Link href="/portfolio">Portfolio</Link>
+              <Link href="/portfolio">{t.nav.portfolio}</Link>
             </li>
             <li className="nav-item">
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog">{t.nav.blog}</Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">{t.nav.contact}</Link>
             </li>
           </ul>
         </nav>
@@ -70,12 +76,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={GithubIcon}
-              width={30}
-              height={30}
-              alt="Github Icon"
-            ></Image>
+            <Image src={GithubIcon} width={30} height={30} alt="Github Icon" />
           </Link>
           <Link
             className="header-socials-item"
@@ -88,15 +89,29 @@ function Header() {
               width={30}
               height={30}
               alt="Linkedin Icon"
-            ></Image>
+            />
           </Link>
+          <div className="header-languages">
+          <button
+            className="language-btn"
+            onClick={() => toggleLanguage("en")}
+          >
+            <Image src={geFlag} width={30} height={30} alt="Georgian flag" />
+          </button>
+          <button
+            className="language-btn"
+            onClick={() => toggleLanguage("ge")}
+          >
+            <Image src={enFlag} width={30} height={30} alt="English flag" />
+          </button>
+        </div>
         </div>
       </div>
 
       <div className="header-mobile">
         <div className="header-logo">
           <Link className="header-logo-image" href="/">
-            <Image src={Logo} width={30} height={30} alt="Logo"></Image>
+            <Image src={Logo} width={30} height={30} alt="Logo" />
           </Link>
         </div>
         <button
@@ -109,7 +124,7 @@ function Header() {
             width={25}
             height={25}
             alt="Burger Menu Icon"
-          ></Image>
+          />
         </button>
 
         <nav
@@ -122,35 +137,49 @@ function Header() {
               width={20}
               height={20}
               alt="Burger Close Menu Icon"
-            ></Image>
+            />
           </button>
           <ul className="mobile-nav-links">
             <li className="nav-item">
               <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                Home
+                {t.nav.home}
               </Link>
             </li>
             <li className="nav-item">
               <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                About
+                {t.nav.about}
               </Link>
             </li>
             <li className="nav-item">
               <Link href="/portfolio" onClick={() => setIsMenuOpen(false)}>
-                Portfolio
+                {t.nav.portfolio}
               </Link>
             </li>
             <li className="nav-item">
               <Link href="/blog" onClick={() => setIsMenuOpen(false)}>
-                Blog
+                {t.nav.blog}
               </Link>
             </li>
             <li className="nav-item">
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact
+                {t.nav.contact}
               </Link>
             </li>
           </ul>
+          <div className="header-languages">
+          <button
+            className="language-btn"
+            onClick={() => toggleLanguage("en")}
+          >
+            <Image src={geFlag} width={30} height={30} alt="Georgian flag" />
+          </button>
+          <button
+            className="language-btn"
+            onClick={() => toggleLanguage("ge")}
+          >
+            <Image src={enFlag} width={30} height={30} alt="English flag" />
+          </button>
+        </div>
         </nav>
       </div>
     </header>

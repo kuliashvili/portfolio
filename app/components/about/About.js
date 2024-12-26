@@ -1,16 +1,19 @@
-import "./About.css";
+"use client";
+import "./About.css"; 
 import Button from "../button/Button";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 
 function About({ headingLevel = "h1" }) {
   const Heading = headingLevel;
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
 
   return (
     <div className="about">
-      <Heading className="about-header">About Me</Heading>
+      <Heading className="about-header">{t.aboutMe}</Heading>
       <p className="about-text">
-        In 2023, I began my journey in web development, starting with HTML, CSS,
-        and JavaScript. Then I moved on to React and Next.js, at the same time
-        working on independent projects like{" "}
+        {t.aboutText1}{" "}
         <a
           className="link"
           href="https://gamoitsani.info"
@@ -30,7 +33,7 @@ function About({ headingLevel = "h1" }) {
         </a>
       </p>
       <p className="about-text">
-        I gained hands-on experience as a Frontend Developer at{" "}
+        {t.aboutText2}{" "}
         <a
           className="link"
           href="https://mim.farm/"
@@ -39,7 +42,7 @@ function About({ headingLevel = "h1" }) {
         >
           Mim Farm
         </a>{" "}
-        and currently work with{" "}
+        {t.aboutText3}{" "}
         <a
           className="link"
           href="https://trips2share.com/en"
@@ -48,21 +51,15 @@ function About({ headingLevel = "h1" }) {
         >
           Trips2Share
         </a>
-        . Along the way, I completed a frontend mentorship at Exadel, earned a
-        Google UX certificate from Coursera, and now in my final year at BTU,
-        Business and Technology University.
+        {t.aboutText4}
       </p>
+      <p className="about-text">{t.aboutText5}</p>
       <p className="about-text">
-        I enjoy building web products that are fast, visually appealing, and
-        user-friendly. Outside of coding, I love training in MMA and jiu-jitsu
-        or spending time with friends.
-      </p>
-      <p className="about-text">
-        Feel free to{" "}
+        {t.aboutText6}{" "}
         <a href="mailto:giorgi.kuliashvili.1@btu.edu.ge" className="link">
-          reach out
+          {t.reachOut}
         </a>{" "}
-        or download my resume below.
+        {t.orDownload}
       </p>
     </div>
   );

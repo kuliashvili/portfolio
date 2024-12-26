@@ -1,3 +1,4 @@
+// app/portfolio/page.js
 "use client";
 import Image from "next/image";
 import "./portfolio.css";
@@ -8,53 +9,27 @@ import portfolio2 from "@/public/assets/portfolio2.png";
 import portfolio3 from "@/public/assets/portfolio3.png";
 import portfolio4 from "@/public/assets/portfolio4.png";
 import portfolio5 from "@/public/assets/portfolio5.png";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
+import { projects } from "@/app/data/projects";
 
-const projects = [
-  {
-    date: "08/05/2024",
-    title: "Gamoitsani.info",
-    builtWith: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/davita00101110dmg/gamoitsani-web",
-    websiteUrl: "https://gamoitsani.info/",
-    coverImage: portfolio3,
-  },
-  {
-    date: "06/15/2024",
-    title: "Plintus.ge",
-    builtWith: ["WordPress", "JavaScript"],
-    websiteUrl: "https://plintus.ge/",
-    coverImage: portfolio4,
-  },
-  {
-    date: "11/12/2024",
-    title: "UsersPanel",
-    builtWith: ["Next.js", "TailwindCss"],
-    githubUrl: "https://github.com/kuliashvili/UsersPanel",
-    coverImage: portfolio1,
-  },
-  {
-    date: "08/25/2024",
-    title: "Rwmena",
-    builtWith: ["Next.js", "Design System"],
-    githubUrl: "https://github.com/kuliashvili/rwmena",
-    coverImage: portfolio2,
-  },
-  {
-    date: "02/06/2024",
-    title: "Budgetify",
-    builtWith: ["React.js", "CSS", "MongoDB"],
-    githubUrl:
-      "https://github.com/kuliashvili/Budgetify/tree/feature/project-initialization",
-    coverImage: portfolio5,
-  },
-];
+const projectImages = {
+  "UsersPanel": portfolio1,
+  "Rwmena": portfolio2,
+  "Gamoitsani.info": portfolio3,
+  "Plintus.ge": portfolio4,
+  "Budgetify": portfolio5,
+};
 
 const ProjectCard = ({ project }) => {
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+  
   return (
     <div className="project-card border-animate border-2">
       <div className="image-container">
         <Image
-          src={project.coverImage}
+          src={projectImages[project.title]}
           alt={project.title}
           className="project-image"
           fill
@@ -67,7 +42,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="link-button"
-              aria-label="View GitHub repository"
+              aria-label={t.viewGithub}
             >
               <Image src={Github} width={20} height={20} alt="github icon" />
             </a>
@@ -78,7 +53,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="link-button"
-              aria-label="Visit live website"
+              aria-label={t.visitWebsite}
             >
               <Image src={Link} width={20} height={20} alt="link icon" />
             </a>
@@ -101,12 +76,18 @@ const ProjectCard = ({ project }) => {
 };
 
 export default function Portfolio() {
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+
   return (
     <div className="portfolio-container">
-      <h1 className="portfolio-header">Portfolio</h1>
+      <h1 className="portfolio-header">{t.portfolioTitle}</h1>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <ProjectCard key={`${project.title}-${index}`} project={project} />
+          <ProjectCard 
+            key={`${project.title}-${index}`} 
+            project={project}
+          />
         ))}
       </div>
     </div>
