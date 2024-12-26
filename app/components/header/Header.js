@@ -94,13 +94,13 @@ function Header() {
           <div className="header-languages">
           <button
             className="language-btn"
-            onClick={() => toggleLanguage("en")}
+            onClick={() => toggleLanguage("ge")}
           >
             <Image src={geFlag} width={30} height={30} alt="Georgian flag" />
           </button>
           <button
             className="language-btn"
-            onClick={() => toggleLanguage("ge")}
+            onClick={() => toggleLanguage("en")}
           >
             <Image src={enFlag} width={30} height={30} alt="English flag" />
           </button>
@@ -169,13 +169,13 @@ function Header() {
           <div className="header-languages">
           <button
             className="language-btn"
-            onClick={() => toggleLanguage("en")}
+            onClick={() => toggleLanguage("ge")}
           >
             <Image src={geFlag} width={30} height={30} alt="Georgian flag" />
           </button>
           <button
             className="language-btn"
-            onClick={() => toggleLanguage("ge")}
+            onClick={() => toggleLanguage("en")}
           >
             <Image src={enFlag} width={30} height={30} alt="English flag" />
           </button>
