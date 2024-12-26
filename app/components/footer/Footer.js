@@ -1,11 +1,17 @@
+
+// app/components/footer/Footer.jsx
+"use client";
 import "./Footer.css";
-// import githubIcon from "/assets/github.svg";
 import githubIcon from "../../../public/assets/github.svg";
 import linkedinIcon from "../../../public/assets/linkedin.svg";
-// import linkedinIcon from "/assets/linkedin.svg";
 import Image from "next/image";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 
 function Footer() {
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -21,7 +27,7 @@ function Footer() {
               width={30}
               height={30}
               alt="Github Icon"
-            ></Image>
+            />
           </a>
           <a
             className="footer-socials-item"
@@ -34,10 +40,10 @@ function Footer() {
               width={30}
               height={30}
               alt="Linkedin Icon"
-            ></Image>
+            />
           </a>
         </div>
-
+        
         <div className="footer-email">
           <p>
             <a href="mailto:giorgi.kuliashvili.1@btu.edu.ge">

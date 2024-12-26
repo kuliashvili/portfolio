@@ -1,10 +1,16 @@
+"use client";
 import "./Experience.css";
 import Link from "next/link";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 
-function Container() {
+function Experience() {
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+
   return (
     <div className="experiences">
-      <h2 className="experiences-header">Work Experience</h2>
+      <h2 className="experiences-header">{t.workExperience}</h2>
       <Link
         href="https://trips2share.com/en"
         target="_blank"
@@ -13,35 +19,20 @@ function Container() {
       >
         <div className="experience border-animate border-1">
           <div className="experience-inner">
-            <p className="container-description">May 2024 – Present</p>
-            <h3 className="container-title">Frontend Developer</h3>
+            <p className="container-description">May 2024 – {t.presentDate}</p>
+            <h3 className="container-title">{t.frontendDev}</h3>
             <ul className="experience-list">
-              <li>
-                Led complete website redesign, including main site and admin
-                panel, with full responsive implementation
-              </li>
-              <li>
-                Developed and implemented a comprehensive design system for
-                consistent fonts, colors, and spacing
-              </li>
-              <li>
-                Introduced and implemented new features to enhance user
-                experience
-              </li>
-              <li>
-                Collaborated effectively with team members to identify and
-                resolve technical issues
-              </li>
-              <li>
-                Contributed to continuous website improvement through iterative
-                development and optimization
-              </li>
+              <li>{t.exp1Point1}</li>
+              <li>{t.exp1Point2}</li>
+              <li>{t.exp1Point3}</li>
+              <li>{t.exp1Point4}</li>
+              <li>{t.exp1Point5}</li>
             </ul>
             <div className="technology">
               <div className="technology-item">Html</div>
               <div className="technology-item">Css</div>
               <div className="technology-item">JavaScript</div>
-              <div className="technology-item">React.cs</div>
+              <div className="technology-item">React.js</div>
               <div className="technology-item">Next.js</div>
             </div>
           </div>
@@ -57,23 +48,12 @@ function Container() {
         <div className="experience border-animate border-1">
           <div className="experience-inner">
             <p className="container-description">Aug 2023 – May 2024</p>
-            <h3 className="container-title">Junior Frontend Developer</h3>
+            <h3 className="container-title">{t.juniorFrontendDev}</h3>
             <ul className="experience-list">
-              <li>
-                Maintained and enhanced company website and admin panel with
-                focus on UX improvements
-              </li>
-              <li>
-                Proposed and implemented new design features to enhance user
-                experience
-              </li>
-              <li>
-                Translated design concepts into functional web implementations
-              </li>
-              <li>
-                Participated actively in team meetings for ideation and
-                problem-solving sessions
-              </li>
+              <li>{t.exp2Point1}</li>
+              <li>{t.exp2Point2}</li>
+              <li>{t.exp2Point3}</li>
+              <li>{t.exp2Point4}</li>
             </ul>
             <div className="technology">
               <div className="technology-item">Html</div>
@@ -89,7 +69,7 @@ function Container() {
       </Link>
 
       <h2 className="experiences-header" style={{ marginTop: "50px" }}>
-        Projects
+        {t.projects}
       </h2>
       <Link
         href="https://gamoitsani.info/"
@@ -101,18 +81,9 @@ function Container() {
           <div className="experience-inner">
             <h3 className="container-title">gamoitsani.info</h3>
             <ul className="experience-list">
-              <li>
-                Designed and developed the official website for Gamoitsani iOS
-                app from scratch
-              </li>
-              <li>
-                Implemented clean and intuitive user interface with carefully
-                selected color scheme
-              </li>
-              <li>
-                Created comprehensive app documentation and user guidance
-                content
-              </li>
+              <li>{t.projectDesc1}</li>
+              <li>{t.projectDesc2}</li>
+              <li>{t.projectDesc3}</li>
             </ul>
             <div className="technology">
               <div className="technology-item">Html</div>
@@ -134,17 +105,9 @@ function Container() {
           <div className="experience-inner">
             <h3 className="container-title">plintus.ge</h3>
             <ul className="experience-list">
-              <li>
-                Designed and developed a comprehensive baseboard information
-                website
-              </li>
-              <li>
-                Led complete design process from color scheme selection to site
-                implementation
-              </li>
-              <li>
-                Created custom WordPress theme to match client specifications
-              </li>
+              <li>{t.projectDesc4}</li>
+              <li>{t.projectDesc5}</li>
+              <li>{t.projectDesc6}</li>
             </ul>
             <div className="technology">
               <div className="technology-item">Html</div>
@@ -160,4 +123,4 @@ function Container() {
   );
 }
 
-export default Container;
+export default Experience;

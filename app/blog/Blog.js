@@ -3,33 +3,25 @@ import "./blog.css";
 import Coding from "@/public/assets/coding.svg";
 import Image from "next/image";
 import { useState } from "react";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 
 export default function Blog() {
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+
   return (
     <div className="blogs">
-      <h1 className="blog-header">Coming Soon!</h1>
+      <h1 className="blog-header">{t.comingSoon}</h1>
       <p className="blog-intro">
         <br />
-        As a frontend developer passionate about creating web experiences, I&apos;m
-        excited to share my journey, insights, and discoveries with you. Here,
-        you&apos;ll find a growing collection of articles covering everything from
-        practical coding solutions to design principles that make websites both
-        beautiful and functional.
+        {t.blogIntro1}
         <br />
         <br />
-        I&apos;m currently crafting detailed posts about Modern web development
-        practices and tools I&apos;ve discovered along my journey, UI/UX design
-        principles I&apos;ve learned from real-world projects, Deep dives into React
-        and Next.js features that have transformed my development process,
-        Personal experiences and lessons from working on web projects
+        {t.blogIntro2}
         <br />
         <br />
-        Having worked on projects from scratch and collaborating with teams at
-        Trips2Share and Mim Farm, I&apos;m eager to share both technical insights and
-        practical experiences that could help others in their web development
-        journey. Check back soon for content! I&apos;m working on making this space
-        not just a blog, but a resource for fellow developers, designers, and
-        anyone interested in web technologies.
+        {t.blogIntro3}
       </p>
       {/* <div className="image-container">
         <Image

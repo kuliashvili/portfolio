@@ -4,9 +4,14 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.css";
 import Button from "../components/button/Button";
+import { useLanguage } from "@/app/context/LanguageContext";
+import { translations } from "@/app/translations/translations";
 
-const Contact = ({headingLevel}) => {
-  const Heading = headingLevel
+const Contact = ({ headingLevel }) => {
+  const Heading = headingLevel;
+  const { currentLanguage } = useLanguage();
+  const t = translations[currentLanguage];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,21 +26,21 @@ const Contact = ({headingLevel}) => {
     const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = t.nameRequired;
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = t.emailRequired;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
+      newErrors.email = t.emailInvalid;
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = t.messageRequired;
     }
 
     if (!captchaToken) {
-      newErrors.captcha = "Bot check is required";
+      newErrors.captcha = t.captchaRequired;
     }
 
     setErrors(newErrors);
@@ -99,13 +104,13 @@ const Contact = ({headingLevel}) => {
 
   return (
     <div className="contact-container">
-      <Heading className="contact-title">Get in Touch with Me</Heading>
+      <Heading className="contact-title">{t.getInTouch}</Heading>
 
       <div className="contact-content">
         <div className="contact-form-wrapper border-animate border-1">
           <form noValidate onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{t.name}</label>
               <input
                 type="text"
                 name="name"
@@ -119,7 +124,7 @@ const Contact = ({headingLevel}) => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t.email}</label>
               <input
                 type="email"
                 name="email"
@@ -133,7 +138,7 @@ const Contact = ({headingLevel}) => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t.message}</label>
               <textarea
                 name="message"
                 id="message"
@@ -158,26 +163,24 @@ const Contact = ({headingLevel}) => {
             </div>
             <div className="button-container">
               <Button type="submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending..." : "Send Message"}
+                {status === "sending" ? t.sending : t.sendMessage}
               </Button>
             </div>
           </form>
 
           {status === "success" && (
-            <div className="success-message">Message sent successfully!</div>
+            <div className="success-message">{t.messageSent}</div>
           )}
 
           {status === "error" && (
-            <div className="error-message">
-              Failed to send message. Please try again.
-            </div>
+            <div className="error-message">{t.messageFailed}</div>
           )}
         </div>
 
         <div className="contact-info border-animate border-1">
-          <h2 className="contact-info-title">Contact Information</h2>
+          <h2 className="contact-info-title">{t.contactInfo}</h2>
           <div className="contact-info-item">
-            <h3>Email</h3>
+            <h3>{t.email}</h3>
             <a
               style={{
                 wordWrap: "break-word",
@@ -188,12 +191,12 @@ const Contact = ({headingLevel}) => {
             </a>
           </div>
           <div className="contact-info-item">
-            <h3>Location</h3>
-            <p>Tbilisi, Georgia</p>
+            <h3>{t.location}</h3>
+            <p>{t.tbilisiGeorgia}</p>
           </div>
           <div className="contact-info-item">
-            <h3>Timezone</h3>
-            <p>Georgia Standard Time (GMT+4)</p>
+            <h3>{t.timezone}</h3>
+            <p>{t.georgiaTime}</p>
           </div>
         </div>
       </div>
