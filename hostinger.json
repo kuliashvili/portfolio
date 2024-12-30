@@ -1,7 +1,0 @@
-{
-    "type": "nodejs",
-    "build": {
-      "command": "npm install && npm run build",
-      "output": "out"
-    }
-  }
