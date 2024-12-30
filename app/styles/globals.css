@@ -1,4 +1,12 @@
 @import url(./design-system.css);
+
+@font-face {
+  font-family: "Mersad";
+  src: url("/fonts/Mersad_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter_28pt-Thin.ttf") format("truetype");
