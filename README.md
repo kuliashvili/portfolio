@@ -1,5 +1,5 @@
 # My Portfolio Website / site is still under construction and not yet finished
-# Link:  [gio.kuliashvili.com](https://gio.kuliashvili.com/)
+# Link:  [giokulo.com](https://giokulo.com/)
 
 Welcome to my **portfolio**! This site showcases my work and experience as a **developer**.
 
